@@ -37,3 +37,17 @@ Each node on our network must keep a registry of all other nodes on the network.
 The consensus algorithm works on a simple heuristic:
 > The longest chain in the network is the de-facto one.
 
+## Hash Quality
+Typically, hash functions are considered **cryptographic** if they satisfy the following properties:
+- Deterministic: The same input always yields the same
+hash.
+- Intractability: It’s infeasible to find the input for a
+given hash except by exhaustion (trying a gargantuan
+amount of possible inputs).
+- Collision-safety: It’s infeasible to find two different
+inputs which output the same hash.
+- Avalanche effect: The smallest change in input should
+yield a hash so different that the new hash appears
+uncorrelated with the old hash.
+- Speed: It’s computationally fast to generate a hash.
+These hash functions are notoriously difficult to reverse.
