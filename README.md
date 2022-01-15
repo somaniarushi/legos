@@ -27,3 +27,13 @@ Our next proof depends on the previous proof. It is generated as follows:
 - Mine a new block: `/mine`
 - Return the full blockchain: `/chain`
 
+## Consensus
+With only the above parts in place, the blockchain is _not decentralized_. How do we ensure that all instances of the blockchain reflect the same chain? This requires the Consensus Algorithm.
+
+Each node on our network must keep a registry of all other nodes on the network. Two endpoints are added for this:
+- Accept a list of new nodes as URLS: `/nodes/register`
+- Resolve any conflict and ensure that every node has correct chain: `/nodes/resolve`
+
+The consensus algorithm works on a simple heuristic:
+> The longest chain in the network is the de-facto one.
+
