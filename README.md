@@ -21,3 +21,9 @@ We'll be using a [HashCash](https://en.wikipedia.org/wiki/Hashcash?ref=hackernoo
 
 Our next proof depends on the previous proof. It is generated as follows:
 > When a number p when hashed with the previous block's solution has a hash with 4 leading 0s, this is our next proof.
+
+## API Endpoints
+- Create new transaction: `/transactions/new`
+- Mine a new block: `/mine`
+- Return the full blockchain: `/chain`
+
